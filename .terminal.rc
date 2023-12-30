@@ -1,3 +1,14 @@
 ulimit -c unlimited
 alias tmux="tmux -2"
 
+function docker-update()
+{
+    dist=$1
+    sudo docker pull $distro/$distro:latest
+}
+
+function docker-run-tf()
+{
+	sudo docker run -it -p 8888:8888 tensorflow/tensorflow:latest-jupyter
+}
+
