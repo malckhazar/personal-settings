@@ -1,0 +1,25 @@
+[user]
+    email = malckhazar@gmail.com
+    name = Malckhazar the SteamCat
+
+[core]
+    editor = vim
+[credential]
+    helper = store
+
+[alias]
+    co = checkout
+    ri = rebase --interactive
+    rc = rebase --continue
+    ca = commit --amend
+    cp = cherry-pick
+    c = commit
+    l = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    d = diff
+    rh = reset HEAD~
+    r = reset
+    a = add
+    sc = show --pretty="" --name-only
+    s = status
+    b = branch
+    p = push -o ci.skip
