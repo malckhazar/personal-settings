@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ulimit -c unlimited
+alias tmux="tmux -2"
+
+function docker-build()
+{
+    package=$1
+    sudo mkdir -p /home/docker/$package
+    # build image
+    sudo docker buildx build -t $package -f docker/$package.Dockerfile /home/docker/$package
+    # create container
+    sudo docker create --name $package $package:latest
+}
+
+function docker-update()
+{
+    dist=$1
+    sudo docker pull $distro/$distro:latest
+}
+
+function docker-run()
+{
+    sudo docker run -it $1:latest
+}
+
+function docker-run-tf()
+{
+	sudo docker run -it -p 8888:8888 tensorflow/tensorflow:latest-jupyter
+}
+
