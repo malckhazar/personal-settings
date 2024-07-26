@@ -3,6 +3,10 @@ Made to keep complex config files like vim's. Repo's root contains files to be p
 
 Clone with `$ git clone --recurse-submodules git@github.com:malckhazar/personal-settings.git`
 
+## i3wm
+Uses py3status in place of i3status bar
+i3status.conf -- config file
+
 ## Vim
 Run `:PluginInstall` on first start to download all required packages
 
